@@ -121,7 +121,24 @@ ___
 
 # Changes
 
-## Changes in 0.0.1
+## v0.0.2
+- **Asynchronous Processing:** Converted file processing to asynchronous, line-by-line reading using aiofiles and asyncio to efficiently handle large files.
+- **Refined Regex Extraction:** Updated regular expressions to more precisely extract passwords and email:password combinations from the GrayKey output.
+- **Improved Length Checking:** Enforced that only values whose lengths fall between the specified minimum and maximum are processed. (The default maximum length has been reduced from 64 to 20.)
+- **Configurable Output File Names:** Output file name prefixes are now defined via constants. Files generated with these prefixes are excluded from the file selection menu.
+- **Birthdate-Based Passwords:**
+  - Introduced an optional feature where users can choose to include additional password combinations based on a birth date.
+  - Users must enter a birth date in the format DD.MM.YYYY (with two-digit day/month and a four-digit year).
+  - The feature generates combinations using all possible permutations of non-empty subsets of:
+    - Day (with and without leading zero),
+    - Month (with and without leading zero),
+    - Year in three forms: full year (e.g. “1978”), the first two digits (e.g. “19”), and the last two digits (e.g. “78”).
+  - If a birth date more than 120 years in the past is entered, it is deemed invalid and no additional combinations are generated.
+  - These birthdate-based combinations are appended at the end of the output file (while ensuring duplicates are not added).
+- **Security Enhancements:** Enhanced the is_secure_path() function to ensure that only relative filenames (with no directory separators) are accepted, preventing potential path traversal issues.
+- **Code Refactoring:** Reduced redundancy by introducing a generic file processing function (process_file_generic()) that encapsulates the common logic for both password list and combo list generation. Specific processing callbacks handle the extraction of passwords and email:password pairs.
+
+## v0.0.1
 - Initial release.
 
 ___
