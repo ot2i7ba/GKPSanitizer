@@ -7,9 +7,6 @@ GKPSanitizer is a Python script created to filter and sanitize password data ext
 > [!WARNING]
 Please note that this script is currently under development, and I cannot provide a 100% guarantee that it operates in a forensically sound manner. It is tailored to meet specific needs at this stage. Use it with caution, especially in environments where forensic integrity is critical.
 
-> [!CAUTION]
-> This project is based on the original repository by [ot2i7ba](https://github.com/ot2i7ba).
-
 ## Table of Contents
 - [Features](#features)
 - [Requirements](#requirements)
@@ -146,6 +143,9 @@ ___
 
 ___
 
+> [!CAUTION]
+> This project is based on the original repository by [ot2i7ba](https://github.com/ot2i7ba).
+
 # License
 This project is licensed under the **[MIT license](https://github.com/ot2i7ba/GKPSanitizer/blob/main/LICENSE)**, providing users with flexibility and freedom to use and modify the software according to their needs.
 
@@ -159,4 +159,3 @@ This project is provided without warranties. Users are advised to review the acc
 This script has been tailored to fit my specific professional needs, and while it may seem like a small tool, it has a significant impact on my workflow. Greetings to my dear colleagues who avoid scripts like the plague and think that consoles and Bash are some sort of dark magic – the [compiled](https://github.com/ot2i7ba/GKPSanitizer/releases) version will spare you the console kung-fu and hopefully be a helpful tool for you as well. 😉
 
 [^1]: [Magnet Forensics GrayKey](https://www.magnetforensics.com/de/products/magnet-graykey/) is a forensic tool to extract data from mobile devices.
-
